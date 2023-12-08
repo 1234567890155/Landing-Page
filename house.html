@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Home</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(background.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            height: auto;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+            color: #ffcc00; /* Dreamy yellow color */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: indianred;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+        }
+
+        .register a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+        .h-text {
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .h-text span {
+            letter-spacing: 5px;
+        }
+
+        .h-text h1 {
+            font-size: 3.5em;
+            color: #ffcc00; /* Dreamy yellow color */
+        }
+
+        .h-text a {
+            text-decoration: none;
+            background: indianred;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+            transition: 0.4s;
+        }
+
+        .h-text a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+        .services {
+            background: rgb(234, 237, 237);
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            background: whitesmoke;
+            border: 1px solid #100f0f;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .service-card img {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cta {
+            padding: 30px;
+            text-align: center;
+            text-underline-position: rgb(2, 2, 2);
+            background-color: #ebefeb;
+            color: rgb(182, 129, 129);
+        }
+
+        .house-plans {
+            background: #f4f4f4; /* Light gray background */
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .house-plans h2 {
+            color: #336699; /* Soothing blue color */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        
+            
+            .quick-search {
+    background-color: #336699; /* Soothing blue color */
+    padding: 20px;
+    text-align: center;
+}
+
+        
+
+        .search-input {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+
+        .search-button {
+            background-color: #ffcc00; /* Dreamy yellow background */
+            color: #336699; /* Soothing blue color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background: transparent;
+            border: 1px solid #ffcc00; /* Dreamy yellow border */
+        }
+
+        .house-plans-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .house-plans-images img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4; /* Light gray background color */
+        }
+        .house-plans-images p {
+    color: #001f3f; /* Dark blue color */
+}
+
+
+        footer {
+            background-color: #f1ecec;
+            padding: 20px;
+            text-align: center;
+            color: rgb(1, 1, 1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Dream Home
+            </div>
+            <div class="menu">
+                <a href="#services">Services</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="register">
+                <a href="#">Register Now</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <span>Lets</span>
+            <h1>Explore Your Dream Home</h1>
+            <br>
+            <a href="#">Tap to Explore</a>
+        </section>
+    </header>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <img src="service4.jpg" alt="Customized Travel Packages">
+            <h3>DREAM HOME TOUR</h3>
+            <p>"A house is made with walls and beams; a home is built with love and dreams." ....</p>
+        </div>
+
+        <div class="service-card">
+            <img src="service5.jpg" alt="Expert Travel Guides">
+            <h3>Expert Home Constructions</h3>
+            <p>May your home become a little heaven on Earth.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="service3.jpg" alt="24/7 Customer Support">
+            <h3>24/7 Customer Support</h3>
+            <p>Have peace of mind with our round-the-clock customer support. We are here to assist you at every step of your new home.</p>
+        </div>
+    </section>
+
+    <section class="house-plans" id="house-plans">
+        <h2>House Plans</h2>
+        <div class="quick-search">
+            <input type="number" class="search-input" placeholder="Bedrooms">
+            <input type="number" class="search-input" placeholder="Bathrooms">
+            <input type="number" class="search-input" placeholder="Floors">
+            <input type="number" class="search-input" placeholder="Garages">
+            <input type="number" class="search-input" placeholder="Square Feet">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="house-plans-images">
+            <img src="house1.jpg" alt="House Plan 1">
+            <img src="house2.jpg" alt="House Plan 2">
+            <img src="house4.jpg" alt="House Plan 3">
+            <!-- Add more images as needed -->
+            <p>3d House Design,Best house design,top house design,new house design, banglow design,architectural design, architects near me, home design architect near me,best architects near me, building architect,super house design, 3D house Design interior design,civil engineer near me, best engineer near me, Duplex House Design, small house design,naksha design,map design,best architect, Beautiful house,house design in muzaffarpur, sitamarhi,motihari,darghanga,1bhk house plan,architect,free house design,</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="cta">
+        <h2>Ready to Plan Your Dream home?</h2>
+        <p>Contact us today and let's find your Dream Home.</p>
+        <a href="#contact" class="btn primary">Contact Us</a>
+    </section>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2023 Dream Home. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
